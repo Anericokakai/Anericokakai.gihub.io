@@ -12,12 +12,42 @@ closebars.onclick=()=>{
     ul.classList.toggle('menu')
 }
 
+// change the background of the home section
+const homesection=document.querySelector('.homesection')
+
+
+var images=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg']
+var counter=0
+
+const slider=()=>{
+
+  if(counter<images.length){
+
+    counter++;
+  }else{
+    counter=1
+  }
+
+  homesection.style.background=`linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/${images[counter-1]})`
+homesection.style.backgroundSize='cover';
+homesection.style.backgroundPosition='center';
+homesection.style.backgroundRepeat='no-repeat;'
+}
+
+setInterval(slider,5000)
+
+
+
+
+
+
+
 
 // smooth scroll
 
 const observer=new IntersectionObserver((entries)=>{
     entries.forEach(entry =>{
-      console.log(entry)
+      
       if(entry.isIntersecting){
         entry.target.classList.add('show')
       }else{
@@ -34,4 +64,4 @@ const observer=new IntersectionObserver((entries)=>{
   
 
   const page=window.location
-  console.log(page)
+  
