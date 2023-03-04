@@ -19,9 +19,18 @@ a{
     background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/background2.jpg);
     background-position: center;
     background-size: cover;
-    color: white;
     background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    
+  animation: change 40s infinite ease ;
+ transform: translateY(-3px);
+
+
+
 }
+
+
 
 
 /* navigations */
@@ -677,3 +686,46 @@ background:rgb(5, 179, 228) ;
     position: fixed;
     background-size: 40%;
  }
+
+ /* keframe for change */
+@keyframes change{
+    0%{
+        background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/1.jpg) ;
+        background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    }
+    20%{
+        background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/2.jpg) ;
+        background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    40%{
+        background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/3.jpg) ;
+        background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    60%{
+        background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/4.jpg) ;
+        background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    80%{
+        background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/5.jpg) ;
+        background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    100%{
+        background:linear-gradient(rgba(0, 0, 0, 0.735), rgba(0, 0, 0, 0.74)),url(./images/bgimages/6.jpg) ;
+        background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+   
+    
+}
