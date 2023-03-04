@@ -28,16 +28,23 @@ a{
 .image{
     display: flex;
     align-items: center;
+    
 }
+
  .image img{
     width: 20%;
+ }
+ .image h1{
+    color:  rgb(5, 179, 228);
+    padding-top: 1em;
  }
  nav{
     display: flex;
     justify-content: space-between;
     height: 70px;
-padding-right: 7em;
+width: 100%;
 align-items: center;
+position: fixed;
     
 
 
@@ -52,7 +59,7 @@ align-items: center;
     
  }
  nav ul li a{
-    color: white;
+    color: rgb(5, 179, 228);
     position: relative;
     padding-bottom: 7px;
  }
@@ -74,17 +81,27 @@ align-items: center;
  .fa-bars{
     position: absolute;
     right: 1em;
-    top: .5em;
+    top: em;
     font-size: 25px;
     cursor: pointer;
     padding: 10px;
+    color: rgb(5, 179, 228);
+
  }
  
    
  @media (max-width:800px){
-   .homesection{
-    position: relative;
-   }
+    nav{
+        position: absolute;
+        height: 100vh;
+        align-items: flex-start;
+        position: fixed;
+        z-index: 7;
+    }
+    nav ul li a{
+        color: white;
+    }
+  
     nav ul{
     
         position: absolute;
@@ -101,27 +118,51 @@ align-items: center;
         transition: .4s ease;
         z-index: 3;
         
+        
+        
     }
     nav ul.menu{
         transform: scaleX(1);
     }
     nav ul li {
         padding-bottom: 50px;
-        
+       
     }
     .fa-xmark{
         position: absolute;
-        top: 1em;
-        left: 2em;
+        top: 50%;
+        left: -1em;
         cursor: pointer;
-        padding: 10px;
-        font-size: 25px;
+        height: 100px;
+        width: 4px;
+        
+        
     }
+    .image{
+        width: 100%;
+        height: 40px;
+    }
+    .image img{
+        width: 60px;
+        height: 40px;
+    }
+   
+    
  }
+
+
+
 
  @media (min-width:801px) {
     .fa-bars,.fa-xmark{
         display: none;
+    }
+    nav{
+        position: fixed;
+        top: -70px;
+        background-color:white;
+        z-index: 1;
+        color:rgb(5, 179, 228) ;
     }
     
  }
@@ -415,9 +456,7 @@ background:rgb(5, 179, 228) ;
     min-height: 70vh;
     position: relative;
 }
-.gallary p , h1{
-    padding-left: 100px;
-}
+
 .gallary h1{
     margin-bottom: 30px;
     font-size: 40px;
@@ -556,9 +595,7 @@ background:rgb(5, 179, 228) ;
     .start{
         padding-left: 0;
     }
-    .image h1{
-        padding-left: 40px;
-    }
+  
     .heading h1{
         padding-left: 20px;
         font-size: 50px;
@@ -603,9 +640,7 @@ background:rgb(5, 179, 228) ;
 
  /* tablets */
  @media (min-width:800px) and (max-width:1200px) {
-    .image h1{
-        padding-left: 40px;
-    }
+   
     nav ul li a{
         font-size: 18px;
     }
@@ -628,4 +663,17 @@ background:rgb(5, 179, 228) ;
 }
  html{
     scroll-behavior: smooth;
+ }
+
+ /* preloader */
+ #preloader{
+    width: 100%;
+    height: 100%;
+   
+    z-index: 200;
+    background:white url(./images/double-whell-with-shadow.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    background-size: 40%;
  }

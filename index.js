@@ -36,7 +36,39 @@ homesection.style.backgroundRepeat='no-repeat;'
 
 setInterval(slider,5000)
 
+// change the navigation to sticky on scroll
 
+
+var prevoius=window.pageYOffset
+window.onscroll=()=>{
+
+
+  var current=window.pageYOffset
+
+  if(prevoius>current){
+
+
+    nav.style.top='0'
+    document.querySelector('.image').style.backgroundColor='white'
+    nav.style.transition='1s'
+   
+    
+  }else{
+
+    nav.style.top='-70px'
+    
+  }
+  prevoius=current
+}
+
+// pre;loader
+var preloader=document.querySelector('#preloader')
+
+const preloaderfunction=()=>{
+
+  preloader.style.display='none'
+}
+window.addEventListener('load',preloaderfunction)
 
 
 
